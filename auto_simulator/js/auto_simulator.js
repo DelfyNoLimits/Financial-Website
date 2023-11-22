@@ -654,6 +654,22 @@ function generarSugerencias() {
   });
   }); 
  }
+
+ function validarCuota(input) {
+  // Obtener el valor ingresado
+  var valorTasa = input.value;
+
+  // Validar si la longitud es mayor a 2
+  if (valorTasa.length > 2) {
+    // Mostrar un mensaje de error
+    document.getElementById('error-cuota').innerHTML = 'No puedes ingresar más de dos cifras.';
+    // Limpiar el valor ingresado
+    input.value = valorTasa.slice(0, 2);
+  } else {
+    // Limpiar el mensaje de error si la entrada es válida
+    document.getElementById('error-cuota').innerHTML = '';
+  }
+}
  
  const buttonCotizar = document.querySelector('#cotizar_top');
 

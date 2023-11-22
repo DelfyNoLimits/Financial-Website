@@ -1009,3 +1009,8 @@
   body.swal2-shown {
     overflow-y: auto !important;
   }
+
+
+  .error-message {
+    color: red;
+  }

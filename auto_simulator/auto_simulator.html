@@ -222,7 +222,10 @@
                 </tr>
                 <tr>
                   <td><label for="initial-fee">Cuota inicial(%)</label></td>
-                  <td><input type="number" id="initial-fee" name="initial-fee"></td>
+                  <td>
+                    <input type="text" id="value-cuota" name="value-cuota" oninput="validarCuota(this)">
+                    <span id="error-cuota" class="error-message"></span>
+                  </td>
                 </tr>
                 <tr>
                   <td><label for="financing-amount">Monto a financiar</label></td>
