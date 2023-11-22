@@ -818,7 +818,20 @@ function generarSugerencias() {
     }
   });
 });
+const valueTasaInput = Swal.getPopup().querySelector('#value-tasa');
 
+valueTasaInput.addEventListener('input', () => {
+  const inputValue = valueTasaInput.value;
+  const maxValue = 99;
+
+  if (inputValue.length > 2) {
+    valueTasaInput.value = inputValue.slice(0, 2);
+  }
+
+  if (parseFloat(inputValue) > maxValue) {
+    valueTasaInput.value = maxValue;
+  }
+});
 
 
 
